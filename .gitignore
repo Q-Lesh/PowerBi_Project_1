@@ -1,0 +1,5 @@
+/Misc
+# Ignore PBIX files
+*.pbix
+# Ignore .csv files
+data/*.csv
