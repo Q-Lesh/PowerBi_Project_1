@@ -16,6 +16,19 @@ Both dashboards use the same underlying data model, but serve different analytic
 A future update will extend the dataset to cover three full calendar years.
 To make temporal analysis easier, year-based filter buttons were added, allowing quick switching between years without manual slicer adjustments.
 
+**Download Dashboards & Dataset**
+
+You can download the Power BI dashboard files (.pbix) and the full dataset (.csv) from the project’s Release section:
+
+Dashboards (PBIX files):
+[https://github.com/Q-Lesh/PowerBI_Project_2/releases/tag/Dashboards_v1](https://github.com/Q-Lesh/PowerBi_Project_1/releases/tag/Dashboards_v.1)
+
+Dataset (CSV files):
+[https://github.com/Q-Lesh/PowerBI_Project_2/releases/tag/Data_v1](https://github.com/Q-Lesh/PowerBi_Project_1/releases/tag/Data_v.1)
+
+**Important**
+After downloading the dataset, update the file paths in Power BI Desktop.
+
 ## Dashboards
 
 1. **Data Jobs Dashboard 1**
