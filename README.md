@@ -1,4 +1,4 @@
-# PowerBI: Data Jobs Dashboardы (2023-2025H1)
+# Power BI: Data Jobs Dashboardы (2023-2025H1)
 
 ## Overview
 
