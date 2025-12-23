@@ -26,7 +26,7 @@ Dashboards (PBIX files):
 Dataset (CSV files):
 [https://github.com/Q-Lesh/PowerBI_Project_2/releases/tag/Data_v1](https://github.com/Q-Lesh/PowerBi_Project_1/releases/tag/Data_v.1)
 
-**Important**
+**Important!**
 After downloading the dataset, update the file paths in Power BI Desktop.
 
 ## Dashboards
