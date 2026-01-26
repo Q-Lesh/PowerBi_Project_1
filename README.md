@@ -1,20 +1,10 @@
-# Power BI: Data Jobs Dashboardы (2023-2025H1)
+# Power BI: Data Jobs Dashboards (2023–2025H1)
 
-## Overview
+Two compact Power BI dashboards analysing the data job market across 2023–2025H1.  
+Both dashboards are built on the same dataset and focus on job volumes, salary levels, and skill demand.  
+This repository serves as a supporting mini-case in the portfolio.
 
-This repository contains two Power BI dashboards built on a shared, updated dataset (**2023 - 2025H1**) of data-related job postings.
-The dashboards are designed to provide a clear, practical view of the data job market, focusing on job volume, skills demand, and compensation trends.
-
-Both dashboards use the same underlying data model, but serve different analytical purposes.
-
-## Dataset
-
-**Time range**: January 1, 2023 – June 30, 2025.
-
-**Coverage**: job titles, salaries (yearly & hourly), skills, locations, platforms, work format, benefits
-
-A future update will extend the dataset to cover three full calendar years.
-To make temporal analysis easier, year-based filter buttons were added, allowing quick switching between years without manual slicer adjustments.
+---
 
 **Download Dashboards & Dataset**
 
@@ -29,81 +19,58 @@ Dataset (CSV files):
 **Important!**
 After downloading the dataset, update the file paths in Power BI Desktop.
 
-## Dashboards
+---
 
-1. **Data Jobs Dashboard 1**
+## Dashboard 1 — Market Overview
 
 ![Dashboard 1](Resources/images/D1.gif)
 
-**Purpose:**
-High-level market overview.
+A single-page, high-level view showing:
 
-**Key characteristics:**
-- Single-page dashboard (the drill-through page was intentionally removed)
-- Focus on:
-   - Total job volume
-   - Median salaries
-   - Job distribution by title
-   - Trends over time
-- Optimized for fast exploration and comparison
+- Total job count  
+- Median yearly & hourly salaries  
+- Salary-based star rating  
+- Job trend over time  
+- Job volume by role  
+- Salary comparison (yearly vs hourly)
 
-This version is intentionally simple and compact, suitable as an entry point or executive-style overview.
+**Filters:** job title, year buttons (2023–2025)
 
-2. **Data Jobs Dashboard 2**
-
-![Dashboard 2](Resources/images/D2.gif)
-
-**Purpose:**
-Deeper analytical exploration with richer interaction.
-
-**Key characteristics:**
-
-- Single focused page with extended interactivity
-- Includes:
-    - Skills popularity (by share and absolute count)
-   - Salary comparison across job titles
-   - Dynamic measure switching
-   - Country and job title filtering
-- Designed for hands-on analysis rather than summary reporting
-
-This version prioritizes analytical flexibility while keeping the layout readable and structured.
-
-## Data Model & Approach
-
-- Star-schema–based model
-- Separate fact and dimension tables
-- Transformations handled in Power Query
-- Metrics calculated using DAX measures
-- Shared logic across both dashboards to ensure consistency
-
-
-## Skills & Features Used
-
-This project applies a focused set of Power BI capabilities to turn a large dataset of job postings into clear, actionable insights.
-
-- **Data Transformation (Power Query):** 
-Cleaned and structured the raw dataset by fixing data types, standardizing fields, removing inconsistencies, and preparing dimensions and fact tables.
-
-- **Measures (DAX):** 
-Created essential measures for analysis, including Median Yearly Salary, Median Hourly Salary, Skills Per Job, and Job Count.
-
-- **Core Visualizations:** 
-Used Bar, Column, Line, and Scatter charts to explore job volume, skills demand, temporal trends, and compensation patterns.
-
-- **KPI Cards & Tables:** 
-Displayed key metrics using Cards and detailed job-level breakdowns using Tables.
-
-- **Layout & Design:** 
-Built a clean, structured dashboard layout optimized for clarity, readability, and fast interpretation of trends.
-
-- **Interactive Controls:** 
-   - Slicers for filtering by Job Title, Year, Country, and other key fields.
-   - Buttons for switching views and clearing filters.
-
+Designed for fast orientation before deeper analysis.
 
 ---
 
-## Conclusion
+## Dashboard 2 — Skills & Salary Exploration
 
-These dashboards demonstrate how structured data modeling, Power Query transformations, and effective visualization choices can convert raw job posting records into a practical analytical tool. Users can filter, explore, and compare roles, salaries, skills, and trends across multiple time periods with minimal friction.
+![Dashboard 2](Resources/images/D2.gif)
+
+Built on a star-schema model with date, skill, company, and schedule dimensions.
+
+Key interactive elements:
+
+- Skills-per-job and salary KPIs  
+- Skill popularity (share or count, switchable)  
+- Salary medians by role (yearly or hourly, switchable)  
+- Tooltips with role-level medians and job counts  
+- Dynamic measure selection for both major visuals  
+
+**Filters:** year, job title, country, clear-slicers button
+
+---
+
+## Under the Hood (short version)
+
+- Dashboard 1 uses a single-table model  
+- Dashboard 2 uses a compact star-schema with a skill bridge table  
+- Data preparation: basic type cleaning (Promoted Headers, Changed Type, Renamed Columns)  
+- DAX: standard measures (COUNTROWS, MEDIAN, DIVIDE) and simple parameter tables for interactive switching  
+- One custom measure adds a normalized 1–5 salary-based star rating
+
+---
+
+## Notes
+
+This project is intentionally scoped as a **supporting mini-case**.  
+It demonstrates practical Power BI modelling, clean visuals, and interactive analysis without excessive complexity.
+
 
